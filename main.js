@@ -82,22 +82,30 @@
         actionBtns[i].addEventListener('click', function() {
             
             // Add class to trigger transition
-        
+            const fact = document.querySelector('.fact');
             const title = document.getElementById('title');            
-            title.classList.add('btn-transition');
+            title.classList.add('h1-transition');
+            fact.classList.add('fact-transition');
+            
+            // iterate over btn selector and add btn-transition
+            const mainBtns = document.querySelectorAll('.btn')
+            console.log(mainBtns)
+            mainBtns.forEach( el => {
+                el.classList.add('btn-transition');
+            })
+
+    // const button = document.querySelector(".h1-transition");
+    // button.addEventListener( "click", () => button.classList.toggle("toggled") );
+            
+            // h1-transition, btn-transition, fact-transition
             
             // Transform buttons
-            const btns = document.querySelectorAll('.btns')
-            btns.forEach( el => {
-                // el.classList.add('btn-transition'); /* do we need a different css class? otherwise uncomment this and comment out 93, 94 hrmmm... maybe we dont youre right but i dont know how to target each separate element to do a different transformation 
-                el.style.transform = "translateY(-30px)";
-                el.style.transition = "transform 2s ease";
-            })
-            
-            // css animation:
-                // hide title
-                // push btns up
-                // expand box 
+            // const btns = document.querySelectorAll('.btns')
+            // btns.forEach( el => {
+            //     // el.classList.add('btn-transition'); /* do we need a different css class? otherwise uncomment this and comment out 93, 94 hrmmm... maybe we dont youre right but i dont know how to target each separate element to do a different transformation 
+            //     el.style.transform = "translateY(-30px)";
+            //     el.style.transition = "transform 2s ease";
+            // })
 
         })
     }
