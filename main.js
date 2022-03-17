@@ -1,7 +1,12 @@
 
  document.addEventListener('DOMContentLoaded', () => {
 
-    // Select the links
+    /*
+    Excuse by Category
+    ---
+    When clicked, update text on page to display excuse from corresponding 
+    category that was clicked
+    */
     const links = document.querySelectorAll('.category')
     // Add Event Listeners for links
     for(let i = 0; i < links.length; i++) {
@@ -33,7 +38,9 @@
     }
 
     /*
-    Random Button
+    Random Excuse 
+    ---
+    When clicked, update text on page to display random fact from any category
     */
     const random = document.getElementById('random');
     random.addEventListener('click', function() {
@@ -62,7 +69,12 @@
     })
 
 
-    // JS Animation
+    /*
+    Button-Click Animation
+    ---
+    When clicked, buttons will transform/transition to the top, display none on 
+    title, 
+    */
     const actionBtns = document.querySelectorAll('.animationBtns');
     const title = document.getElementById('title');
 
@@ -76,7 +88,8 @@
             // Transform font size
             const btns = document.querySelectorAll('.btns')
             btns.forEach( el => {
-                el.style.transition = "translateY(-200px) 2s ease";
+                el.style.transform = "translateY(-30px)";
+                el.style.transition = "transform 1s ease";
             })
             
             // css animation:
@@ -88,10 +101,32 @@
     }
         
 
- });
+    /*
+    Dropdown Button Functionality
+    ---
+    When the user clicks on the button, toggle between hiding and showing 
+    the dropdown content
+    */
+   
+    function dropdownToggle() {
+       document.getElementById("myDropdown").classList.toggle("show");
+    }
 
-// fetch boilerplate
+    const categorySelectorBtn = document.getElementById('categorySelector');
+    categorySelectorBtn.addEventListener('click', dropdownToggle);
 
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.btn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+            }
+        }
+        }
+    }
 
-
-// endpoint --> https://excuser.herokuapp.com/v1/excuse
+});

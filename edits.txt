@@ -1,0 +1,18 @@
+- When viewed as a Chrome extension, everything goes out of view. I made the following
+    CSS edits: 
+        - .container {padding: 200px -> 0px}
+        - h1 {font-size: 100px -> 70px}
+
+- Chrome extension was throwing an error because we had inline JS on index.html
+    to handle the category dropdown. Edits to handle that:
+        - Move all the JS to main.js
+        - Create id "categorySelector" for button.btn in index.html (the category button)
+        - Add selector and click eventListener for categorySelector in main.js
+        - Renamed the dropdown function myFunction -> dropdownToggle in main.js
+
+- Added comments on main.js for clarity of each block
+
+- manifest.json didn't work properly
+    - Had to change: manifest version, content_scripts url
+    - Had to add title
+    - Had to add the 'action' for it to popup when clicked
