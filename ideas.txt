@@ -1,0 +1,8 @@
+- YouTube animals video
+    - Feature: select animal
+- Good news
+    - https://www.foxnews.com/category/good-news
+    - https://www.msn.com/en-us/news/good-news/
+    - https://www.sunnyskyz.com/
+- Movies based on location
+- 

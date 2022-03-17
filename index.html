@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+
+    </title>
+    <meta>
+
+    <link rel="stylesheet" href="static/style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Pick an excuse</h1>
+        <div class="btns"> 
+            
+            <button id="random" class="btn animationBtns">Random</button>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="btn">Pick Category</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a class="category animationBtns" href="#" id="family">Family</a>
+                    <a class="category animationBtns" href="#" id="office">Office</a>
+                    <a class="category animationBtns" href="#" id="children">Children</a>
+                    <a class="category animationBtns" href="#" id="college">College</a>
+                    <a class="category animationBtns" href="#" id="party">Party</a>
+                </div>
+            </div>
+
+        </div>
+        <p class="fact"></p>
+        
+    </div>
+
+
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.btn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+                }
+            }
+            }
+        }
+    </script>
+
+    <!-- // Celeste's brain blast
+
+        // box that drops down
+            // animal selector || movie genre
+            // after select video - player opens, selector goes away
+            // feature: fullscreen option -->
+
+        
+    <!-- JS deps -->
+    <script src="main.js">
+        
+    </script>
+</body>
+</html>
