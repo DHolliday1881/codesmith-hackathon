@@ -76,20 +76,22 @@
     title, 
     */
     const actionBtns = document.querySelectorAll('.animationBtns');
-    const title = document.getElementById('title');
 
     // Click the links or random btn
     for (let i = 0; i < actionBtns.length; i++) {
         actionBtns[i].addEventListener('click', function() {
             
-            // set title display to none
-            title.style.display = 'none';
-
-            // Transform font size
+            // Add class to trigger transition
+        
+            const title = document.getElementById('title');            
+            title.classList.add('btn-transition');
+            
+            // Transform buttons
             const btns = document.querySelectorAll('.btns')
             btns.forEach( el => {
+                // el.classList.add('btn-transition'); /* do we need a different css class? otherwise uncomment this and comment out 93, 94 hrmmm... maybe we dont youre right but i dont know how to target each separate element to do a different transformation 
                 el.style.transform = "translateY(-30px)";
-                el.style.transition = "transform 1s ease";
+                el.style.transition = "transform 2s ease";
             })
             
             // css animation:

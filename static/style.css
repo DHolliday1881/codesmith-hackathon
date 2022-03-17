@@ -17,7 +17,8 @@
 
 h1 {
     color: #000;
-    font-size: 70px;
+    font-size: 50px;
+    transition: all 2s ease
 }
 
 .btns {
@@ -31,23 +32,41 @@ h1 {
 
 .fact {
     display: flex;
-    
+    font-size: 10px;
+    transition: all 2s ease;
 }
 
 /* Dropdown Button */
 .btn {
-    background-color: #3498DB;
+    background-color: #5243d8;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
     margin: 20px 50px;
+    border-radius: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transition: all 2s ease;
   }
   
   /* Dropdown button on hover & focus */
   .btn:hover, .btn:focus {
-    background-color: #2980B9;
+    background-color: #2600af;
+  }
+
+
+  .h1-transition  h1{
+    transform: scale(0.5) translateY(-30px);
+    /* transition ?? */
+  }
+
+  .btn-transition .btn {
+    transform: scale(0.8) translateY(-40px); 
+  }
+
+  .fact-transtion .fact {
+  transform: scale(1.2) translateY(-30px); 
   }
   
   /* The container <div> - needed to position the dropdown content */
