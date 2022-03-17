@@ -86,6 +86,22 @@
             const title = document.getElementById('title');            
             title.classList.add('h1-transition');
             fact.classList.add('fact-transition');
+
+
+
+            setTimeout(
+                function() {
+                    var id200 = document.getElementById('title');   
+                    id200.style.transition = "opacity " + 0.5 + "s";
+                    id200.style.opacity = 0;
+                    id200.addEventListener("transitionend", function() {
+                    id200.style.display = "none";
+                    });
+                }, 2000
+            );
+
+
+
             
             // iterate over btn selector and add btn-transition
             const mainBtns = document.querySelectorAll('.btn')
@@ -93,7 +109,7 @@
             mainBtns.forEach( el => {
                 el.classList.add('btn-transition');
             })
-
+    
     // const button = document.querySelector(".h1-transition");
     // button.addEventListener( "click", () => button.classList.toggle("toggled") );
             
@@ -128,12 +144,12 @@
     // Close the dropdown menu if the user clicks outside of it
     window.onclick = function(event) {
         if (!event.target.matches('.btn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        let i;
         for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
+            let openDropdown = dropdowns[i];
             if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
+                openDropdown.classList.remove('show');
             }
         }
         }

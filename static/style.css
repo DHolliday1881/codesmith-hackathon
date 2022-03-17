@@ -16,7 +16,7 @@
 }
 
 h1 {
-    color: #000;
+    color: #2600af;
     font-size: 50px;
     transition: all 2s ease;
 }
@@ -32,25 +32,28 @@ h1 {
 
 .fact {
     display: flex;
+    justify-content: center;
     font-size: 20px;
     transition: all 2s ease;
     overflow-wrap: break-word;
     z-index: -1;
+    text-align: center;
 }
 
 
 
 /* Dropdown Button */
 .btn {
-    background-color: #5243d8;
-    color: white;
+    background-color: #fff;
+    color: #2600af;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    margin: 20px 50px;
+    margin: 20px 50px 5px;
     height: 52px;
     width: 152px;
+    border: 1px solid #5f51df;
     border-radius: 10px;
     box-shadow: rgb(38, 57, 77) 0px 10px 20px -10px;
     transition: all 2s ease;
@@ -63,6 +66,7 @@ h1 {
   /* Dropdown button on hover & focus */
   .btn:hover, .btn:focus {
     background-color: #2600af;
+    color: #fefefe
   }
 
 
@@ -88,22 +92,24 @@ h1 {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
-    
+    margin: 0 55px;
+    background-color: #5f51df;
+    min-width: 140px;
+    border-radius: 20px;
+    box-shadow: rgb(38, 57, 77) 10px 10px 20px -10px;
+    text-align: center;
   }
   
   /* Links inside the dropdown */
   .dropdown-content a {
-    color: black;
+    color: #fff;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd}
+  .dropdown-content a:hover {background-color: #2600af}
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
